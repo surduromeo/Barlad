@@ -79,14 +79,19 @@ var informatiiPoza = {
 		<p align="justify">În 1939 şi 1940 localul şcolii a fost avariat de puternice cutremure de pământ, fiind ulterior incendiat de trupele germane aflate în retragere la 23 august 1944.(1)\</p>'
 	},
 	
-		'poza 5': {
+		
+	
+	'poza 5': {
+        titlu: 'Complexul Şcolar Bârlad',
+        descriere: '<p align="justify">La începutul anului 1958, printr-o Hotărâre a Consiliului de Miniştri, ansamblul de clădiri construit în oraşul Bârlad cu destinaţia Liceu militar sau Academie militară a fost transferat de la Ministerul Forţelor Armate la Ministerul Învăţământului, care a decis înfiinţarea unui Complex Şcolar, în care să fie instruiţi aproape toţi elevii din oraş. Lucrările au fost finalizate în noiembrie 1958 şi tot atunci Inspectoratul Şcolar al Regiunii Iaşi a hotărât mutarea în noul local a tuturor elevilor din ciclul gimnazial şi liceal. Astfel, elevii din trei licee bârlădene (Liceul „Gh. Roşca-Codreanu”, Liceul de fete, Liceul Pedagogic) şi şase şcoli generale au devenit elevii noii instituţii de învăţământ care, printr-un ordin al Ministerului, a fost numit „Complexul Şcolar Bârlad”.</p>\
+		<p align="justify">www.liceuleminescubarlad.ro\</p>'
+	},
+	
+	'poza1': {
         titlu: 'a',
         descriere: '<p align="justify">bla bla</p>\
 		<p align="justify">bla bla</p>\
 		<p align="justify">bla bla</p>\
 		<p align="justify">bla bla\</p>'
 	},
-	
-	
-	
 }
