@@ -81,7 +81,7 @@ controlLayers.addBaseLayer(bd1900, 'Barlad 1900');
 // https://www.flickr.com/services/api/explore/flickr.photos.search
 
 // Define flickrURL endpoint with API explorer: insert your key, and tags= or text= to filter results
-var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c7a425bea6a3c79092460130ee52f358&user_id=118910875%40N05&tags=old&extras=geo%2Curl_t%2Curl_s%2Curl_m%2Curl_o%2Ctitle&format=json&nojsoncallback=1";
+var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c7a425bea6a3c79092460130ee52f358&user_id=118910875%40N05&tags=old&per_page=200&extras=geo%2Curl_t%2Curl_s%2Curl_m%2Curl_o%2Ctitle&format=json&nojsoncallback=1";
 
 
 // Define the flickr popup display
