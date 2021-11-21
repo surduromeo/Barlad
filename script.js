@@ -123,7 +123,7 @@ var myIcon = L.icon({
 
 
 // Define flickrURL endpoint with API explorer: insert your key, and tags= or text= to filter results
-var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c7a425bea6a3c79092460130ee52f358&user_id=118910875%40N05&tags=new&extras=geo%2Curl_t%2Curl_s%2Curl_m%2Curl_o%2Ctitle&format=json&nojsoncallback=1";
+var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c7a425bea6a3c79092460130ee52f358&user_id=118910875%40N05&tags=new&per_page=200&extras=geo%2Curl_t%2Curl_s%2Curl_m%2Curl_o%2Ctitle&format=json&nojsoncallback=1";
 
 // Define the flickr popup display
 // ** TO DO: Rewrite link to view original source photo directly on Flickr
