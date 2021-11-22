@@ -103,7 +103,7 @@ $.getJSON(flickrURL, function (data) {
   // Create new layerGroup for the markers, with option to append ".addTo(map);" to display by default
   var layerGroup = new L.LayerGroup().addTo(map);
   // Add layerGroup to your layer control and insert your label to appear in legend
-  controlLayers1.addOverlay(layerGroup, 'Foto__1900*'); // Insert your own legend label
+  controlLayers1.addOverlay(layerGroup, 'Foto_1900*'); // Insert your own legend label
   // Start a loop to insert flickr photo data into photoContent
   for (var i = 0; i < data.photos.photo.length; i++) {
     var photoContent = data.photos.photo[i];
@@ -134,7 +134,7 @@ $.getJSON(flickrURL, function (data) {
   // Create new layerGroup for the markers, with option to append ".addTo(map);" to display by default
   var layerGroup = new L.LayerGroup();
   // Add layerGroup to your layer control and insert your label to appear in legend
-   controlLayers1.addOverlay(layerGroup, 'Foto__1960*');   // Insert your own legend label
+   controlLayers1.addOverlay(layerGroup, 'Foto_1960*');   // Insert your own legend label
   // Start a loop to insert flickr photo data into photoContent
   for (var i = 0; i < data.photos.photo.length; i++) {
     var photoContent = data.photos.photo[i];
