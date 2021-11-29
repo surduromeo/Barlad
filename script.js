@@ -92,7 +92,7 @@ var popupHTML = function(photo){
       result = '<strong>'+photo.title+'</strong><br>';
       result += '<a href="'+photo.url_o+'" target="_blank">';
       result += '<img src="'+photo.url_s+'"></a>';      //was url_t; want url_s; can change to url_m if desired, but frame needs work
-      result += '<small>clik pe imagine pentru marire.</small>';
+      result += '<small>click image to enlarge in new tab</small>';
       return result;
 	   
 	    
