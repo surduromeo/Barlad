@@ -1,2 +1,2 @@
 ## Demo
-- https://surduromeo.github.io/barlad/
+- https://surduromeo.github.io/Barlad/
