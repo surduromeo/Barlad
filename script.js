@@ -1,7 +1,7 @@
 // Template by http://github.com/jackdougherty/leaflet-map/
 // See Leaflet tutorial links in README.md
-
 // set up the map center and zoom level
+
 var map = L.map('map', {
   center: [
 46.2263,27.6667], // [41.5, -72.7] for Connecticut; [41.76, -72.67] for Hartford county or city
@@ -9,19 +9,16 @@ var map = L.map('map', {
   zoomControl: false // add later to reposition
 });
 
-
-
 // optional : customize link to view source code; add your own GitHub repository
+
 map.attributionControl
 .setPrefix(' Created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
 
 // REMOVE AFTER MAP CONSTRUCTION: optional Zoom Label (also in index.html)
-
-
 // Reposition zoom control other than default topleft
-L.control.zoom({position: "topright"}).addTo(map);
 
+L.control.zoom({position: "topright"}).addTo(map);
 
 // optional: add legend to toggle any baselayers and/or overlays
 // global variable with (null, null) allows indiv layers to be added inside functions below
@@ -46,7 +43,6 @@ var OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 controlLayers.addBaseLayer(OpenStreetMap, 'Barlad.');
-
 var bd1960 = new L.tileLayer.wms(" http://mapwarper.net/maps/tile/37261/{z}/{x}/{y}.png", {
   layers: 'Barlad Online',
   version: '1.1.0',
@@ -54,11 +50,6 @@ var bd1960 = new L.tileLayer.wms(" http://mapwarper.net/maps/tile/37261/{z}/{x}/
   attribution:'Map 1960-1967</a>'
 })
 controlLayers.addBaseLayer(bd1960, 'Barlad 1960');
-
-
-
-
-
 var bd1900 = new L.tileLayer.wms("http://mapwarper.net/maps/tile/37305/{z}/{x}/{y}.png", {
   layers: 'Barlad Online',
   version: '1.1.0',
@@ -83,10 +74,10 @@ controlLayers.addBaseLayer(bd1900, 'Barlad 1900');
 // Define flickrURL endpoint with API explorer: insert your key, and tags= or text= to filter results
 var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c7a425bea6a3c79092460130ee52f358&user_id=118910875%40N05&tags=old&per_page=200&extras=geo%2Curl_t%2Curl_s%2Curl_m%2Curl_c%2Ctitle&format=json&nojsoncallback=1";
 
-
 // Define the flickr popup display
 // ** TO DO: Rewrite link to view original source photo directly on Flickr
 // ** POSSIBLY include this code directly in the functions below for easier sequencing by novices
+
 var popupHTML = function(photo){
   var result = "";
       result = '<strong>'+photo.title+'</strong><br>';
@@ -94,12 +85,11 @@ var popupHTML = function(photo){
       result += '<img src="'+photo.url_s+'"></a>';      
 	//was url_t; want url_s; can change to url_m if desired, but frame needs work
       result += '<small>click image to enlarge in new tab</small>';
-      return result;
-	   
-	    
+      return result;	    
 }
 
 // Load photos from flickr JSON feed (insert your flickrURL above), display with clickable blue markers
+
 $.getJSON(flickrURL, function (data) {
   // Create new layerGroup for the markers, with option to append ".addTo(map);" to display by default
   var layerGroup = new L.LayerGroup().addTo(map);
@@ -114,7 +104,6 @@ $.getJSON(flickrURL, function (data) {
    	 marker.addTo(layerGroup);
   }
 });
-
 var myIcon = L.icon({
     iconUrl: 'ap.png',
     iconSize: [38, 45],
@@ -130,8 +119,8 @@ var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.sear
 // Define the flickr popup display
 // ** TO DO: Rewrite link to view original source photo directly on Flickr
 // ** POSSIBLY include this code directly in the functions below for easier sequencing by novices
-
 // Load photos from flickr JSON feed (insert your flickrURL above), display with clickable blue markers
+
 $.getJSON(flickrURL, function (data) {
   // Create new layerGroup for the markers, with option to append ".addTo(map);" to display by default
   var layerGroup = new L.LayerGroup();
@@ -146,21 +135,22 @@ $.getJSON(flickrURL, function (data) {
    	 marker.addTo(layerGroup);
   }
 });
-
 var myIcon1 = L.icon({
     iconUrl: 'ap1.png',
     iconSize: [38, 45],
     iconAnchor: [22, 44],
     popupAnchor: [-3, -76],
 });
+
 //////////////////////////////////////////////
+
 var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c7a425bea6a3c79092460130ee52f358&user_id=118910875%40N05&tags=mon&per_page=200&extras=geo%2Curl_t%2Curl_s%2Curl_m%2Curl_c%2Ctitle&format=json&nojsoncallback=1";
 
 // Define the flickr popup display
 // ** TO DO: Rewrite link to view original source photo directly on Flickr
 // ** POSSIBLY include this code directly in the functions below for easier sequencing by novices
-
 // Load photos from flickr JSON feed (insert your flickrURL above), display with clickable blue markers
+
 $.getJSON(flickrURL, function (data) {
   // Create new layerGroup for the markers, with option to append ".addTo(map);" to display by default
   var layerGroup = new L.LayerGroup();
@@ -176,7 +166,7 @@ $.getJSON(flickrURL, function (data) {
   }
 });
 
-var myIcon1 = L.icon({
+var myIcon2 = L.icon({
     iconUrl: 'ap2.png',
     iconSize: [38, 45],
     iconAnchor: [22, 44],
