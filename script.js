@@ -124,6 +124,7 @@ var myIcon = L.icon({
 
 
 // Define flickrURL endpoint with API explorer: insert your key, and tags= or text= to filter results
+
 var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c7a425bea6a3c79092460130ee52f358&user_id=118910875%40N05&tags=new&per_page=200&extras=geo%2Curl_t%2Curl_s%2Curl_m%2Curl_c%2Ctitle&format=json&nojsoncallback=1";
 
 // Define the flickr popup display
@@ -152,8 +153,40 @@ var myIcon1 = L.icon({
     iconAnchor: [22, 44],
     popupAnchor: [-3, -76],
 });
+//////////////////////////////////////////////
+var flickrURL = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=c7a425bea6a3c79092460130ee52f358&user_id=118910875%40N05&tags=mon&per_page=200&extras=geo%2Curl_t%2Curl_s%2Curl_m%2Curl_c%2Ctitle&format=json&nojsoncallback=1";
+
+// Define the flickr popup display
+// ** TO DO: Rewrite link to view original source photo directly on Flickr
+// ** POSSIBLY include this code directly in the functions below for easier sequencing by novices
+
+// Load photos from flickr JSON feed (insert your flickrURL above), display with clickable blue markers
+$.getJSON(flickrURL, function (data) {
+  // Create new layerGroup for the markers, with option to append ".addTo(map);" to display by default
+  var layerGroup = new L.LayerGroup();
+  // Add layerGroup to your layer control and insert your label to appear in legend
+   controlLayers1.addOverlay(layerGroup, 'Monumente"');   // Insert your own legend label
+  // Start a loop to insert flickr photo data into photoContent
+  for (var i = 0; i < data.photos.photo.length; i++) {
+    var photoContent = data.photos.photo[i];
+    var marker = new L.marker([photoContent.latitude, photoContent.longitude],{icon: myIcon1});
+    marker.bindPopup(popupHTML(photoContent));
+    // Add the marker to the layerGroup
+   	 marker.addTo(layerGroup);
+  }
+});
+
+var myIcon1 = L.icon({
+    iconUrl: 'ap2.png',
+    iconSize: [38, 45],
+    iconAnchor: [22, 44],
+    popupAnchor: [-3, -76],
+});
 
 
+
+
+//////////////////////////////////
 new L.Control.BootstrapModal({
   modalId: 'modal_about',
   tooltip: "Informatii",
