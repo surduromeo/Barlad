@@ -159,7 +159,7 @@ $.getJSON(flickrURL, function (data) {
   // Start a loop to insert flickr photo data into photoContent
   for (var i = 0; i < data.photos.photo.length; i++) {
     var photoContent = data.photos.photo[i];
-    var marker = new L.marker([photoContent.latitude, photoContent.longitude],{icon: myIcon1});
+    var marker = new L.marker([photoContent.latitude, photoContent.longitude],{icon: myIcon2});
     marker.bindPopup(popupHTML(photoContent));
     // Add the marker to the layerGroup
    	 marker.addTo(layerGroup);
